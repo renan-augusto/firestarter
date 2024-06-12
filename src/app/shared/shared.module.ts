@@ -17,11 +17,10 @@ import { ShellComponent } from './shell/shell.component';
 const components = [ ShellComponent ];
 const modules = [
   CommonModule,
-  RouterModule,
+  MatButtonModule,
   MatToolbarModule,
   MatIconModule,
   LayoutModule,
-  MatButtonModule,
   MatSidenavModule,
   MatListModule,
   MatMenuModule,
@@ -29,12 +28,13 @@ const modules = [
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  RouterModule
 ];
 
 @NgModule({
   declarations: [
-    ShellComponent
+    ...components
   ],
   imports: [...modules],
   exports: [
